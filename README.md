@@ -52,22 +52,19 @@ The directory structure of your new project looks like this:
 ├── README.md          <- The top-level README for developers using this project.
 ├── bin                <- Shell scripts and compiled binaries.
 ├── data
-│   ├── external       <- Data from third party sources.
-│   ├── database       <- Analysis data stored in database format eg. .csv / SQL.
+│   ├── external       <- Data in/out of third party sources, eg. FLYA/CYANA 
+│   ├── db             <- Analysis data stored in database format eg. .csv / SQL.
 │   ├── interim        <- Intermediate data, eg. trial processing.
-│   ├── final          <- The final, canonical data sets for modeling.
+│   ├── final          <- The final, canonical data sets for modeling.j
 │   └── raw            <- The original, immutable data, preferably symlinked to datastore.
 |                         e.g. `ln -s path_to_data path_to_raw`
 |
 ├── docs               <- A default Sphinx project; see sphinx-doc.org for details.
-|
-├── external
-│   ├── input          <- Input to external programs, eg. CYANA/FLYA.
-│   └── output         <- Output from external programs eg. CYANA/FLYA
 │
 ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
 │   |                     the creator's initials, and a short `-` delimited description, e.g.
 │   |                     `1.0-jqp-initial-data-exploration`.
+│   ├── figures        <- Location for final figure generation notebooks.  
 │   └── templates      <- Templates for common analyses.  
 |
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.

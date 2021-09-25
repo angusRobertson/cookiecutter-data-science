@@ -96,11 +96,11 @@ class TestCookieSetup(object):
             'references',
             'reports',
             'reports/figures',
-            'src',
-            'src/data',
-            'src/features',
-            'src/models',
-            'src/visualization',
+            'lib',
+            'lib/data',
+            'lib/features',
+            'lib/models',
+            'lib/visualization',
         ]
 
         ignored_dirs = [

@@ -53,6 +53,7 @@ The directory structure of your new project looks like this:
 ├── bin                <- Shell scripts and compiled binaries.
 ├── data
 │   ├── external       <- Data from third party sources.
+│   ├── database       <- Analysis data stored in database format eg. .csv / SQL.
 │   ├── interim        <- Intermediate data, eg. trial processing.
 │   ├── final          <- The final, canonical data sets for modeling.
 │   └── raw            <- The original, immutable data, preferably symlinked to datastore.
@@ -72,6 +73,7 @@ The directory structure of your new project looks like this:
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+│   ├── templates      <- Templates for reporting analysis  
 │   ├── validation     <- Validation of analysis workup.
 │   ├── deposition     <- A default location for accumulation of deposition info.
 │   └── figures        <- Generated graphics and figures to be used in reporting

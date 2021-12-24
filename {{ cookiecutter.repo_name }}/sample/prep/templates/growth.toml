@@ -1,0 +1,103 @@
+# NMRX-schema-file
+# Example prep template
+
+title = "My preparation"
+date = 2020-05-10
+prepID = "unique prep ID"
+
+[growth]
+
+
+# ============================== Plate ========================================
+[growth.plate]
+medium = "agarose"
+antibiotic = ["Kanamycin"]
+antibiotic_CID = [123456]
+antibiotic_concentrations = [100e-6]
+
+
+# =========================== Starter culture =================================
+[growth.starter_culture]
+medium_name = "M9"
+medium_components = [
+    "NaPi dibasic",
+]
+medium_components_CID = [
+    61488,
+]
+medium_concentrations = [
+    100e-3,
+]
+
+flask = "250 mL Erlmeyer"
+volume = 50e-3    # volume in L
+trace_elements = true
+additional_cations = { mg = 1e-3, ca = 1e-4 }
+additional_isogro = nan    # float: concentration
+
+h2o_concentration = 100.0
+d2o_concentration = 0.0
+
+antibiotic = ["Kanamycin"]
+antibiotic_CID = [123456]
+antibiotic_concentrations = [100e-6]
+
+carbon_source = ["glucose"]
+carbon_source_CID = [123456]
+carbon_source_labelling = { H_1 = 100.0, H_2 = 0.0, C_12 = 99.0, C_13 = 1.0, N_14 = 100.0, N_15 = 0.0 }
+carbon_source_concentrations = [100e-6]
+
+nitrogen_source = ["ammonium chloride"]
+nitrogen_source_CID = [123456]
+nitrogen_source_labelling = { H_1 = 100.0, H_2 = 0.0, C_12 = 99.0, C_13 = 1.0, N_14 = 100.0, N_15 = 0.0 }
+nitrogen_source_concentrations = [100e-6]
+
+
+# ============================ Main culture ===================================
+[growth.main_culture]
+medium_name = "M9"
+medium_components = [
+    "NaPi dibasic",
+]
+medium_components_CID = [
+    61488,
+]
+medium_concentrations = [
+    100e-3,
+]
+
+flask = "UltraYield 2.7"
+volume = 500e-3    # volume in L
+trace_elements = true
+additional_cations = { mg = 1e-3, ca = 1e-4 }
+additional_isogro = nan    # float: concentration
+
+h2o_concentration = 100.0
+d2o_concentration = 0.0
+
+antibiotic = ["Kanamycin"]
+antibiotic_CID = [123456]
+antibiotic_concentrations = [100e-6]
+
+carbon_source = ["glucose"]
+carbon_source_CID = [123456]
+carbon_source_labelling = { H_1 = 100.0, H_2 = 0.0, C_12 = 99.0, C_13 = 1.0, N_14 = 100.0, N_15 = 0.0 }
+carbon_source_concentrations = [100e-6]
+
+nitrogen_source = ["ammonium chloride"]
+nitrogen_source_CID = [123456]
+nitrogen_source_labelling = { H_1 = 100.0, H_2 = 0.0, C_12 = 99.0, C_13 = 1.0, N_14 = 100.0, N_15 = 0.0 }
+nitrogen_source_concentrations = [100e-6]
+
+# =========================== Transitions =====================================
+[growth.transitions]
+plate_to_starter = { cron = 1, date = 2020-10-23, time = 10:25:59 }
+starter_to_interim = { cron = 2, date = 2020-10-23, time = 10:25:59, OD_600 = 0.0, volume_transferred = 0.0 }
+starter_to_main = { cron = 3, date = 2020-10-23, time = 10:25:59, OD_600 = 0.0, volume_transferred = 0.0 }
+induction = { cron = 4, date = 2020-10-23, time = 10:25:59, compound = "IPTG", compound_CID = 16760528, OD_600 = 0.0, volume_added = 0.0, final_conc = 0.0 }
+
+
+[growth.monitoring]
+OD_600_time = [10:32:59]
+OD_600_value = [0.05]
+final_yield = 0.0

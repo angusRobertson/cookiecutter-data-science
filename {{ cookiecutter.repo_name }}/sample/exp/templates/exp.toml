@@ -1,6 +1,6 @@
 # This is a sample experiment protocol to be parseed.
 
-title = "NMRX experiment"
+title = "NMRX experiment instance"
 
 [sample]
 
@@ -53,7 +53,6 @@ variant = nan  # str
 labelling_scheme = { H_1 = 100.0, H_2 = 0.0, C_12 = 99.0, C_13 = 1.0, N_14 = 100.0, N_15 = 0.0 }
 reprotonated = nan  # bool
 concentration = 0.0 # ligand concentration in M
-
 
 # ============================== Assembly ===============================
 [sample.assembly]

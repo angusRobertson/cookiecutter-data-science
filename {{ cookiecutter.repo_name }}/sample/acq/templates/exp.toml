@@ -1,0 +1,65 @@
+# This is a sample experiment protocol to be parseed.
+
+title = "NMRX experiment"
+
+[sample]
+
+# ============================== Identification ===============================
+[sample.id]
+sampleID = "MPro306ck"
+projectID = "relaxation"
+experiment_purpose = """
+# Insert justification here
+"""
+
+# ============================== Buffer =======================================
+[sample.buffer]
+buffer = "NaPi"
+buffer_CID = nan  # int
+buffer_concentration = 10.0e-3 # buffer concentration in M
+buffer_pH = 7.0 # buffer concentration in μM
+d2o_concentration = 3.0 # D2O concentration v/v
+
+# ========================= Reference compound ================================
+[sample.reference]
+frq_ref_cmpnd = "DSS"
+frq_ref_cmpnd_CID = 5167273
+frq_ref_cmpnd_labelling = { H_1 = 0.0, H_2 = 100.0, C_12 = 0.0, C_13 = 100.0, N_14 = 0.0, N_15 = 100.0 }
+frq_ref_cmpnd_concentration = 0.3e-6 # reference compound concentration in M
+
+pH_ref_cmpnd = nan
+pH_ref_cmpnd_CID = 5167273
+pH_ref_cmpnd_splitting = nan # float: reference compoound splitting in Hz / ppm as appropriate
+pH_ref_cmpnd_labelling = { H_1 = 0.0, H_2 = 100.0, C_12 = 0.0, C_13 = 100.0, N_14 = 0.0, N_15 = 100.0 }
+pH_ref_cmpnd_concentration = nan # float: reference compound concentration in M
+
+temp_ref_cmpnd = nan
+temp_ref_cmpnd_CID = 5167273
+temp_ref_cmpnd_labelling = { H_1 = 0.0, H_2 = 100.0, C_12 = 0.0, C_13 = 100.0, N_14 = 0.0, N_15 = 100.0 }
+temp_ref_cmpnd_concentration = nan # float: reference compound concentration in M
+
+# ============================== Protein ===============================
+[sample.protein]
+name = "MPro"
+variant = "C145A"
+labelling_scheme = { H_1 = 0.0, H_2 = 100.0, C_12 = 0.0, C_13 = 100.0, N_14 = 0.0, N_15 = 100.0 }
+reprotonated = true
+concentration = 500e-6 # protein concentration in M
+
+# ============================== Ligand ===============================
+[sample.ligand]
+name = nan    # str
+variant = nan  # str
+labelling_scheme = { H_1 = 100.0, H_2 = 0.0, C_12 = 99.0, C_13 = 1.0, N_14 = 100.0, N_15 = 0.0 }
+reprotonated = nan  # bool
+concentration = 0.0 # ligand concentration in M
+
+
+# ============================== Assembly ===============================
+[sample.assembly]
+name = nan    # str
+variant = nan  # str
+labelling_scheme = { H_1 = 100.0, H_2 = 0.0, C_12 = 99.0, C_13 = 1.0, N_14 = 100.0, N_15 = 0.0 }
+reprotonated = nan  # bool
+concentration = 0.0 # concentration in M
+

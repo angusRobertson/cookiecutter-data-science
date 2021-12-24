@@ -33,7 +33,7 @@ var/
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit test / coverage reports
+# Unit test / coverage results
 htmlcov/
 .tox/
 .coverage
@@ -76,7 +76,7 @@ target/
 .ipynb_checkpoints/
 
 # exclude data from source control by default
-data/interim
+data/tmp
 data/external
 
 # Mac OS-specific storage files
